@@ -22,12 +22,9 @@ package-lock.json
 !frontend/package-lock.json
 
 # Env / secrets
-.env
-.env.*
 !.env.example
 
 # Editor
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -62,3 +59,4 @@ yarn-debug.log*
 # Misc
 *.bak
 *.tmp
+config.bat

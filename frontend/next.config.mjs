@@ -275,4 +275,4 @@ const nextConfig = {
   },
 }
 
-export default withBundleAnalyzer(withNextIntl(withPWA(nextConfig)))
+export default withBundleAnalyzer(withNextIntl(withPWA(nextConfig)));
