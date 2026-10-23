@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
     "analyze": "ANALYZE=true next build",
     "check-budget": "node scripts/check-bundle-budget.mjs",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint src --ext .ts,.tsx --max-warnings=0",
@@ -17,7 +17,7 @@
     "check-translations": "node scripts/check-translations.js",
     "check-plurals": "node scripts/check-plurals.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "test-storybook": "test-storybook",
     "test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && test-storybook --ci\"",
     "generate-client": "openapi-typescript ../backend/openapi.json -o src/lib/api/generated/openapi.d.ts --immutable"
